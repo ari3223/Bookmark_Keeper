@@ -56,9 +56,13 @@ function addNew(e) {
 function deleteBook(e) {
      //make sure that user click on X
     if(e.target.className === 'ex'){
-         //remove from page
+        e.target.classList.add('exitAnime');
+        setTimeout(function() {
+            //remove from page
         e.target.parentElement.remove();
          //remove from Local Storage
         lc.removefromlc(e.target, lc.getLC());
+        }, 180);
+         
     }
 }
